@@ -299,15 +299,18 @@ input, textarea, select {
     z-index: 1000;
     padding: 16px 0;
     transition: var(--transition-base);
+    /* شیشه‌ای بودن نوار ناوبری در همه حالت‌ها */
+    background: var(--bg-glass);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+    box-shadow: 0 4px 20px rgba(15, 23, 42, 0.08);
+    border-bottom: 1px solid rgba(148, 163, 184, 0.4);
 }
 
 .navbar.scrolled {
-    background: rgba(11, 15, 26, 0.95);
-    backdrop-filter: blur(20px);
-    -webkit-backdrop-filter: blur(20px);
+    /* فقط سایز و سایه کمی تغییر کند؛ رنگ تیره نشود تا شیشه‌ای بماند */
     padding: 10px 0;
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
-    border-bottom: 1px solid var(--border-color);
+    box-shadow: 0 8px 30px rgba(15, 23, 42, 0.12);
 }
 
 .navbar .container {
