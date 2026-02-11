@@ -1,0 +1,890 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>نوآوری هوش | هوش مصنوعی پیشرفته</title>
+    <meta name="description" content="شرکت نوآوری هوش - ارائه‌دهنده راهکارهای هوش مصنوعی پیشرفته برای آینده‌ای هوشمندتر">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader">
+            <div class="neural-network">
+                <div class="node"></div>
+                <div class="node"></div>
+                <div class="node"></div>
+                <div class="node"></div>
+                <div class="node"></div>
+            </div>
+            <p class="loader-text">در حال بارگذاری...</p>
+        </div>
+    </div>
+
+    <!-- Particle Background -->
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="navbar">
+        <div class="container">
+            <a href="#home" class="logo">
+                <i class="fas fa-brain"></i>
+                <span>نوآوری<strong>هوش</strong></span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="active">خانه</a></li>
+                <li><a href="#about">درباره ما</a></li>
+                <li><a href="#services">خدمات</a></li>
+                <li><a href="#portfolio">نمونه‌کارها</a></li>
+                <li><a href="#blog">بلاگ</a></li>
+                <li><a href="#contact">تماس</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="#contact" class="btn btn-primary btn-sm">مشاوره رایگان</a>
+                <button class="menu-toggle" id="menuToggle" aria-label="منوی ناوبری">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ==================== HOME SECTION ==================== -->
+    <section id="home" class="hero-section">
+        <div class="hero-bg-effects">
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+            <div class="gradient-orb orb-3"></div>
+            <div class="grid-overlay"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text" data-animate="fade-right">
+                    <span class="hero-badge">
+                        <i class="fas fa-rocket"></i>
+                        آینده با هوش مصنوعی آغاز می‌شود
+                    </span>
+                    <h1 class="hero-title">
+                        <span class="gradient-text">هوش مصنوعی</span>
+                        <br>نسل بعدی نوآوری
+                    </h1>
+                    <p class="hero-description">
+                        ما با بهره‌گیری از پیشرفته‌ترین فناوری‌های هوش مصنوعی، راهکارهای هوشمند و خلاقانه‌ای برای کسب‌وکارها ارائه می‌دهیم. از یادگیری ماشین تا پردازش زبان طبیعی، ما مسیر موفقیت شما را هموار می‌کنیم.
+                    </p>
+                    <div class="hero-buttons">
+                        <a href="#services" class="btn btn-primary btn-lg">
+                            <i class="fas fa-play-circle"></i>
+                            شروع کنید
+                        </a>
+                        <a href="#about" class="btn btn-outline btn-lg">
+                            <i class="fas fa-info-circle"></i>
+                            بیشتر بدانید
+                        </a>
+                    </div>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="150">0</span>+
+                            <span class="stat-label">پروژه موفق</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="98">0</span>%
+                            <span class="stat-label">رضایت مشتری</span>
+                        </div>
+                        <div class="stat-item">
+                            <span class="stat-number" data-count="50">0</span>+
+                            <span class="stat-label">متخصص AI</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="hero-visual" data-animate="fade-left">
+                    <div class="hero-image-wrapper">
+                        <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&q=80" alt="هوش مصنوعی" class="hero-img" loading="eager">
+                        <div class="floating-card card-1">
+                            <i class="fas fa-chart-line"></i>
+                            <span>دقت ۹۹.۵٪</span>
+                        </div>
+                        <div class="floating-card card-2">
+                            <i class="fas fa-bolt"></i>
+                            <span>پردازش آنی</span>
+                        </div>
+                        <div class="floating-card card-3">
+                            <i class="fas fa-shield-alt"></i>
+                            <span>امنیت بالا</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <a href="#about">
+                <div class="mouse">
+                    <div class="wheel"></div>
+                </div>
+                <span>اسکرول کنید</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- ==================== ABOUT SECTION ==================== -->
+    <section id="about" class="about-section section">
+        <div class="container">
+            <div class="section-header" data-animate="fade-up">
+                <span class="section-tag">درباره ما</span>
+                <h2 class="section-title">ما <span class="gradient-text">آینده</span> را می‌سازیم</h2>
+                <p class="section-subtitle">شرکت نوآوری هوش با هدف ایجاد تحول دیجیتال از طریق هوش مصنوعی تأسیس شده است</p>
+            </div>
+
+            <div class="about-grid">
+                <div class="about-image" data-animate="fade-right">
+                    <div class="about-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600&q=80" alt="تیم نوآوری هوش" loading="lazy">
+                        <div class="experience-badge">
+                            <span class="exp-number">۱۰+</span>
+                            <span class="exp-text">سال تجربه</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-content" data-animate="fade-left">
+                    <h3>ماموریت ما: ساختن آینده‌ای هوشمند</h3>
+                    <p>
+                        شرکت نوآوری هوش از سال ۱۳۹۴ با تیمی از بهترین متخصصان هوش مصنوعی و داده‌کاوی ایران، در مسیر ارائه راهکارهای نوآورانه و کاربردی فعالیت می‌کند. ما معتقدیم که هوش مصنوعی کلید گشودن درهای آینده است.
+                    </p>
+
+                    <div class="about-features">
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-eye"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h4>چشم‌انداز</h4>
+                                <p>تبدیل شدن به پیشروترین شرکت هوش مصنوعی در خاورمیانه و ارائه راهکارهای جهانی</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-bullseye"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h4>مأموریت</h4>
+                                <p>توانمندسازی کسب‌وکارها با فناوری هوش مصنوعی برای رشد پایدار و رقابت‌پذیری</p>
+                            </div>
+                        </div>
+                        <div class="feature-item">
+                            <div class="feature-icon">
+                                <i class="fas fa-gem"></i>
+                            </div>
+                            <div class="feature-content">
+                                <h4>ارزش‌ها</h4>
+                                <p>نوآوری مستمر، کیفیت بی‌نظیر، مشتری‌مداری و مسئولیت اجتماعی</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="about-values">
+                        <div class="value-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>تیم متخصص</span>
+                        </div>
+                        <div class="value-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>فناوری پیشرفته</span>
+                        </div>
+                        <div class="value-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>پشتیبانی ۲۴/۷</span>
+                        </div>
+                        <div class="value-item">
+                            <i class="fas fa-check-circle"></i>
+                            <span>امنیت داده‌ها</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Partners / Clients -->
+            <div class="partners-section" data-animate="fade-up">
+                <h3 class="partners-title">همکاران و مشتریان ما</h3>
+                <div class="partners-track">
+                    <div class="partner-logo"><i class="fas fa-building"></i> شرکت الف</div>
+                    <div class="partner-logo"><i class="fas fa-university"></i> دانشگاه تهران</div>
+                    <div class="partner-logo"><i class="fas fa-hospital"></i> بیمارستان ب</div>
+                    <div class="partner-logo"><i class="fas fa-industry"></i> صنایع پ</div>
+                    <div class="partner-logo"><i class="fas fa-landmark"></i> سازمان ت</div>
+                    <div class="partner-logo"><i class="fas fa-store"></i> فروشگاه ث</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SERVICES SECTION ==================== -->
+    <section id="services" class="services-section section">
+        <div class="container">
+            <div class="section-header" data-animate="fade-up">
+                <span class="section-tag">خدمات ما</span>
+                <h2 class="section-title">راهکارهای <span class="gradient-text">هوشمند</span> ما</h2>
+                <p class="section-subtitle">مجموعه‌ای کامل از خدمات هوش مصنوعی برای تحول دیجیتال کسب‌وکار شما</p>
+            </div>
+
+            <div class="services-grid">
+                <div class="service-card" data-animate="fade-up" data-delay="100">
+                    <div class="service-icon-wrapper">
+                        <div class="service-icon">
+                            <i class="fas fa-brain"></i>
+                        </div>
+                        <div class="service-glow"></div>
+                    </div>
+                    <h3>یادگیری ماشین</h3>
+                    <p>طراحی و پیاده‌سازی مدل‌های یادگیری ماشین سفارشی برای تحلیل داده‌ها، پیش‌بینی روندها و بهینه‌سازی فرآیندهای کسب‌وکار</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> مدل‌سازی پیش‌بینی</li>
+                        <li><i class="fas fa-check"></i> طبقه‌بندی و خوشه‌بندی</li>
+                        <li><i class="fas fa-check"></i> بهینه‌سازی الگوریتم‌ها</li>
+                    </ul>
+                    <a href="#contact" class="service-link">
+                        اطلاعات بیشتر
+                        <i class="fas fa-arrow-left"></i>
+                    </a>
+                </div>
+
+                <div class="service-card featured" data-animate="fade-up" data-delay="200">
+                    <span class="service-badge">محبوب‌ترین</span>
+                    <div class="service-icon-wrapper">
+                        <div class="service-icon">
+                            <i class="fas fa-comments"></i>
+                        </div>
+                        <div class="service-glow"></div>
+                    </div>
+                    <h3>پردازش زبان طبیعی</h3>
+                    <p>توسعه سیستم‌های NLP پیشرفته شامل چت‌بات‌های هوشمند، تحلیل احساسات، ترجمه ماشینی و استخراج اطلاعات از متن</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> چت‌بات هوشمند فارسی</li>
+                        <li><i class="fas fa-check"></i> تحلیل احساسات</li>
+                        <li><i class="fas fa-check"></i> خلاصه‌سازی خودکار</li>
+                    </ul>
+                    <a href="#contact" class="service-link">
+                        اطلاعات بیشتر
+                        <i class="fas fa-arrow-left"></i>
+                    </a>
+                </div>
+
+                <div class="service-card" data-animate="fade-up" data-delay="300">
+                    <div class="service-icon-wrapper">
+                        <div class="service-icon">
+                            <i class="fas fa-eye"></i>
+                        </div>
+                        <div class="service-glow"></div>
+                    </div>
+                    <h3>بینایی ماشین</h3>
+                    <p>پیاده‌سازی سیستم‌های بینایی ماشین برای تشخیص تصاویر، ویدیو، تشخیص چهره و کنترل کیفیت صنعتی</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> تشخیص اشیا</li>
+                        <li><i class="fas fa-check"></i> پردازش تصویر پزشکی</li>
+                        <li><i class="fas fa-check"></i> نظارت هوشمند</li>
+                    </ul>
+                    <a href="#contact" class="service-link">
+                        اطلاعات بیشتر
+                        <i class="fas fa-arrow-left"></i>
+                    </a>
+                </div>
+
+                <div class="service-card" data-animate="fade-up" data-delay="400">
+                    <div class="service-icon-wrapper">
+                        <div class="service-icon">
+                            <i class="fas fa-robot"></i>
+                        </div>
+                        <div class="service-glow"></div>
+                    </div>
+                    <h3>اتوماسیون هوشمند</h3>
+                    <p>خودکارسازی فرآیندهای تکراری و پیچیده با استفاده از RPA و هوش مصنوعی برای افزایش بهره‌وری سازمانی</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> RPA پیشرفته</li>
+                        <li><i class="fas fa-check"></i> بهینه‌سازی فرآیند</li>
+                        <li><i class="fas fa-check"></i> یکپارچه‌سازی سیستم‌ها</li>
+                    </ul>
+                    <a href="#contact" class="service-link">
+                        اطلاعات بیشتر
+                        <i class="fas fa-arrow-left"></i>
+                    </a>
+                </div>
+
+                <div class="service-card" data-animate="fade-up" data-delay="500">
+                    <div class="service-icon-wrapper">
+                        <div class="service-icon">
+                            <i class="fas fa-chart-bar"></i>
+                        </div>
+                        <div class="service-glow"></div>
+                    </div>
+                    <h3>تحلیل داده کلان</h3>
+                    <p>استخراج دانش ارزشمند از حجم عظیم داده‌ها با استفاده از ابزارهای پیشرفته Big Data و تکنیک‌های یادگیری عمیق</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> داشبوردهای تحلیلی</li>
+                        <li><i class="fas fa-check"></i> گزارش‌های پیش‌بینی</li>
+                        <li><i class="fas fa-check"></i> تحلیل بلادرنگ</li>
+                    </ul>
+                    <a href="#contact" class="service-link">
+                        اطلاعات بیشتر
+                        <i class="fas fa-arrow-left"></i>
+                    </a>
+                </div>
+
+                <div class="service-card" data-animate="fade-up" data-delay="600">
+                    <div class="service-icon-wrapper">
+                        <div class="service-icon">
+                            <i class="fas fa-cloud"></i>
+                        </div>
+                        <div class="service-glow"></div>
+                    </div>
+                    <h3>AI ابری</h3>
+                    <p>ارائه خدمات هوش مصنوعی به‌صورت ابری (AIaaS) با مقیاس‌پذیری بالا، امنیت پیشرفته و هزینه بهینه</p>
+                    <ul class="service-features">
+                        <li><i class="fas fa-check"></i> API هوش مصنوعی</li>
+                        <li><i class="fas fa-check"></i> مقیاس‌پذیری خودکار</li>
+                        <li><i class="fas fa-check"></i> مدیریت ابری</li>
+                    </ul>
+                    <a href="#contact" class="service-link">
+                        اطلاعات بیشتر
+                        <i class="fas fa-arrow-left"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== PORTFOLIO SECTION ==================== -->
+    <section id="portfolio" class="portfolio-section section">
+        <div class="container">
+            <div class="section-header" data-animate="fade-up">
+                <span class="section-tag">نمونه‌کارها</span>
+                <h2 class="section-title">پروژه‌های <span class="gradient-text">موفق</span> ما</h2>
+                <p class="section-subtitle">نگاهی به پروژه‌هایی که با هوش مصنوعی تحول ایجاد کرده‌ایم</p>
+            </div>
+
+            <!-- Portfolio Filter -->
+            <div class="portfolio-filter" data-animate="fade-up">
+                <button class="filter-btn active" data-filter="all">همه</button>
+                <button class="filter-btn" data-filter="nlp">پردازش زبان</button>
+                <button class="filter-btn" data-filter="vision">بینایی ماشین</button>
+                <button class="filter-btn" data-filter="ml">یادگیری ماشین</button>
+                <button class="filter-btn" data-filter="automation">اتوماسیون</button>
+            </div>
+
+            <div class="portfolio-grid">
+                <div class="portfolio-item" data-category="nlp" data-animate="fade-up" data-delay="100">
+                    <div class="portfolio-card">
+                        <div class="portfolio-image">
+                            <img src="https://images.unsplash.com/photo-1531746790095-e5995f1a264d?w=500&q=80" alt="چت‌بات هوشمند فارسی" loading="lazy">
+                            <div class="portfolio-overlay">
+                                <button class="portfolio-zoom" data-title="چت‌بات هوشمند فارسی" data-desc="توسعه چت‌بات پیشرفته فارسی‌زبان با قابلیت درک مکالمات پیچیده و پاسخ‌گویی طبیعی به مشتریان" data-img="https://images.unsplash.com/photo-1531746790095-e5995f1a264d?w=800&q=80">
+                                    <i class="fas fa-expand"></i>
+                                </button>
+                                <a href="#contact" class="portfolio-link">
+                                    <i class="fas fa-link"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="portfolio-info">
+                            <span class="portfolio-category">پردازش زبان طبیعی</span>
+                            <h3>چت‌بات هوشمند فارسی</h3>
+                            <p>سیستم مکالمه هوشمند با دقت ۹۵٪</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-category="vision" data-animate="fade-up" data-delay="200">
+                    <div class="portfolio-card">
+                        <div class="portfolio-image">
+                            <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=500&q=80" alt="تشخیص بیماری از تصاویر پزشکی" loading="lazy">
+                            <div class="portfolio-overlay">
+                                <button class="portfolio-zoom" data-title="تشخیص بیماری از تصاویر پزشکی" data-desc="سیستم تشخیص خودکار بیماری‌ها از روی تصاویر رادیولوژی و پاتولوژی با دقت بالای ۹۸ درصد" data-img="https://images.unsplash.com/photo-1576091160550-2173dba999ef?w=800&q=80">
+                                    <i class="fas fa-expand"></i>
+                                </button>
+                                <a href="#contact" class="portfolio-link">
+                                    <i class="fas fa-link"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="portfolio-info">
+                            <span class="portfolio-category">بینایی ماشین</span>
+                            <h3>تشخیص بیماری از تصاویر پزشکی</h3>
+                            <p>دقت تشخیص ۹۸.۲٪ در تصاویر رادیولوژی</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-category="ml" data-animate="fade-up" data-delay="300">
+                    <div class="portfolio-card">
+                        <div class="portfolio-image">
+                            <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=500&q=80" alt="پیش‌بینی بازار مالی" loading="lazy">
+                            <div class="portfolio-overlay">
+                                <button class="portfolio-zoom" data-title="پیش‌بینی بازار مالی" data-desc="مدل پیش‌بینی هوشمند روند بازار بورس و ارز دیجیتال با استفاده از الگوریتم‌های یادگیری عمیق و تحلیل سری‌های زمانی" data-img="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=800&q=80">
+                                    <i class="fas fa-expand"></i>
+                                </button>
+                                <a href="#contact" class="portfolio-link">
+                                    <i class="fas fa-link"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="portfolio-info">
+                            <span class="portfolio-category">یادگیری ماشین</span>
+                            <h3>پیش‌بینی بازار مالی</h3>
+                            <p>دقت پیش‌بینی ۸۷٪ در بازار سهام</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-category="automation" data-animate="fade-up" data-delay="400">
+                    <div class="portfolio-card">
+                        <div class="portfolio-image">
+                            <img src="https://images.unsplash.com/photo-1565106430482-8f6e74349ca1?w=500&q=80" alt="اتوماسیون خط تولید" loading="lazy">
+                            <div class="portfolio-overlay">
+                                <button class="portfolio-zoom" data-title="اتوماسیون خط تولید" data-desc="پیاده‌سازی سیستم کنترل کیفیت هوشمند در خط تولید کارخانه با استفاده از بینایی ماشین و یادگیری عمیق" data-img="https://images.unsplash.com/photo-1565106430482-8f6e74349ca1?w=800&q=80">
+                                    <i class="fas fa-expand"></i>
+                                </button>
+                                <a href="#contact" class="portfolio-link">
+                                    <i class="fas fa-link"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="portfolio-info">
+                            <span class="portfolio-category">اتوماسیون</span>
+                            <h3>اتوماسیون خط تولید</h3>
+                            <p>کاهش ۴۰٪ هزینه‌های تولید</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-category="nlp" data-animate="fade-up" data-delay="500">
+                    <div class="portfolio-card">
+                        <div class="portfolio-image">
+                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=500&q=80" alt="تحلیل احساسات شبکه‌های اجتماعی" loading="lazy">
+                            <div class="portfolio-overlay">
+                                <button class="portfolio-zoom" data-title="تحلیل احساسات شبکه‌های اجتماعی" data-desc="سیستم تحلیل لحظه‌ای احساسات کاربران در شبکه‌های اجتماعی فارسی‌زبان برای برندهای بزرگ" data-img="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=800&q=80">
+                                    <i class="fas fa-expand"></i>
+                                </button>
+                                <a href="#contact" class="portfolio-link">
+                                    <i class="fas fa-link"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="portfolio-info">
+                            <span class="portfolio-category">پردازش زبان طبیعی</span>
+                            <h3>تحلیل احساسات شبکه‌های اجتماعی</h3>
+                            <p>تحلیل بلادرنگ میلیون‌ها پست</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="portfolio-item" data-category="vision" data-animate="fade-up" data-delay="600">
+                    <div class="portfolio-card">
+                        <div class="portfolio-image">
+                            <img src="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=500&q=80" alt="شهر هوشمند" loading="lazy">
+                            <div class="portfolio-overlay">
+                                <button class="portfolio-zoom" data-title="سیستم شهر هوشمند" data-desc="طراحی و پیاده‌سازی سیستم مدیریت ترافیک هوشمند با استفاده از دوربین‌های AI-powered و تحلیل بلادرنگ" data-img="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=800&q=80">
+                                    <i class="fas fa-expand"></i>
+                                </button>
+                                <a href="#contact" class="portfolio-link">
+                                    <i class="fas fa-link"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="portfolio-info">
+                            <span class="portfolio-category">بینایی ماشین</span>
+                            <h3>سیستم شهر هوشمند</h3>
+                            <p>کاهش ۳۰٪ ترافیک شهری</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox Modal -->
+    <div id="lightbox" class="lightbox">
+        <div class="lightbox-content">
+            <button class="lightbox-close" id="lightboxClose">&times;</button>
+            <img id="lightboxImg" src="" alt="">
+            <div class="lightbox-info">
+                <h3 id="lightboxTitle"></h3>
+                <p id="lightboxDesc"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- ==================== BLOG SECTION ==================== -->
+    <section id="blog" class="blog-section section">
+        <div class="container">
+            <div class="section-header" data-animate="fade-up">
+                <span class="section-tag">بلاگ</span>
+                <h2 class="section-title">آخرین <span class="gradient-text">مقالات</span></h2>
+                <p class="section-subtitle">جدیدترین مطالب آموزشی و اخبار دنیای هوش مصنوعی</p>
+            </div>
+
+            <!-- Blog Search & Categories -->
+            <div class="blog-toolbar" data-animate="fade-up">
+                <div class="blog-search">
+                    <i class="fas fa-search"></i>
+                    <input type="text" id="blogSearch" placeholder="جستجو در مقالات..." autocomplete="off">
+                </div>
+                <div class="blog-categories">
+                    <button class="cat-btn active" data-category="all">همه</button>
+                    <button class="cat-btn" data-category="آموزشی">آموزشی</button>
+                    <button class="cat-btn" data-category="اخبار">اخبار</button>
+                    <button class="cat-btn" data-category="تحلیل">تحلیل</button>
+                    <button class="cat-btn" data-category="ترند">ترند</button>
+                </div>
+            </div>
+
+            <!-- Featured Post -->
+            <div class="featured-post" data-animate="fade-up" data-blog-category="ترند">
+                <div class="featured-image">
+                    <img src="https://images.unsplash.com/photo-1620712943543-bcc4688e7485?w=700&q=80" alt="آینده هوش مصنوعی" loading="lazy">
+                    <span class="featured-badge">مقاله ویژه</span>
+                </div>
+                <div class="featured-content">
+                    <div class="post-meta">
+                        <span><i class="fas fa-folder"></i> ترند</span>
+                        <span><i class="fas fa-calendar"></i> ۱۵ بهمن ۱۴۰۴</span>
+                        <span><i class="fas fa-clock"></i> ۸ دقیقه مطالعه</span>
+                    </div>
+                    <h3>آینده هوش مصنوعی در سال ۱۴۰۵: چه تغییراتی در انتظار ماست؟</h3>
+                    <p>بررسی جامع ترندهای هوش مصنوعی در سال آینده، از مدل‌های زبانی بزرگ تا هوش مصنوعی عمومی. این مقاله نگاهی عمیق به آینده فناوری و تأثیر آن بر زندگی روزمره دارد.</p>
+                    <a href="#" class="read-more">
+                        ادامه مطلب
+                        <i class="fas fa-arrow-left"></i>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Blog Grid -->
+            <div class="blog-grid">
+                <article class="blog-card" data-animate="fade-up" data-delay="100" data-blog-category="آموزشی">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=400&q=80" alt="یادگیری عمیق" loading="lazy">
+                        <span class="blog-tag">آموزشی</span>
+                    </div>
+                    <div class="blog-content">
+                        <div class="post-meta">
+                            <span><i class="fas fa-calendar"></i> ۱۰ بهمن ۱۴۰۴</span>
+                            <span><i class="fas fa-clock"></i> ۵ دقیقه</span>
+                        </div>
+                        <h3>راهنمای جامع یادگیری عمیق برای مبتدیان</h3>
+                        <p>همه چیز درباره شبکه‌های عصبی عمیق، از مفاهیم پایه تا پیاده‌سازی عملی...</p>
+                        <a href="#" class="read-more">
+                            ادامه مطلب <i class="fas fa-arrow-left"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="blog-card" data-animate="fade-up" data-delay="200" data-blog-category="اخبار">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=400&q=80" alt="GPT جدید" loading="lazy">
+                        <span class="blog-tag">اخبار</span>
+                    </div>
+                    <div class="blog-content">
+                        <div class="post-meta">
+                            <span><i class="fas fa-calendar"></i> ۵ بهمن ۱۴۰۴</span>
+                            <span><i class="fas fa-clock"></i> ۳ دقیقه</span>
+                        </div>
+                        <h3>انقلاب مدل‌های زبانی بزرگ: آخرین پیشرفت‌ها</h3>
+                        <p>بررسی جدیدترین مدل‌های زبانی و تأثیر آن‌ها بر صنعت فناوری اطلاعات...</p>
+                        <a href="#" class="read-more">
+                            ادامه مطلب <i class="fas fa-arrow-left"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="blog-card" data-animate="fade-up" data-delay="300" data-blog-category="تحلیل">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?w=400&q=80" alt="AI در صنعت" loading="lazy">
+                        <span class="blog-tag">تحلیل</span>
+                    </div>
+                    <div class="blog-content">
+                        <div class="post-meta">
+                            <span><i class="fas fa-calendar"></i> ۱ بهمن ۱۴۰۴</span>
+                            <span><i class="fas fa-clock"></i> ۶ دقیقه</span>
+                        </div>
+                        <h3>تأثیر هوش مصنوعی بر صنایع مختلف ایران</h3>
+                        <p>تحلیل عمیق نحوه تغییر صنایع ایرانی با ورود هوش مصنوعی و فرصت‌ها...</p>
+                        <a href="#" class="read-more">
+                            ادامه مطلب <i class="fas fa-arrow-left"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="blog-card" data-animate="fade-up" data-delay="400" data-blog-category="آموزشی">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1518186285589-2f7649de83e0?w=400&q=80" alt="پایتون و AI" loading="lazy">
+                        <span class="blog-tag">آموزشی</span>
+                    </div>
+                    <div class="blog-content">
+                        <div class="post-meta">
+                            <span><i class="fas fa-calendar"></i> ۲۵ دی ۱۴۰۴</span>
+                            <span><i class="fas fa-clock"></i> ۷ دقیقه</span>
+                        </div>
+                        <h3>بهترین کتابخانه‌های پایتون برای هوش مصنوعی</h3>
+                        <p>معرفی و مقایسه کتابخانه‌های محبوب مانند TensorFlow، PyTorch و...</p>
+                        <a href="#" class="read-more">
+                            ادامه مطلب <i class="fas fa-arrow-left"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="blog-card" data-animate="fade-up" data-delay="500" data-blog-category="ترند">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400&q=80" alt="ربات‌ها" loading="lazy">
+                        <span class="blog-tag">ترند</span>
+                    </div>
+                    <div class="blog-content">
+                        <div class="post-meta">
+                            <span><i class="fas fa-calendar"></i> ۲۰ دی ۱۴۰۴</span>
+                            <span><i class="fas fa-clock"></i> ۴ دقیقه</span>
+                        </div>
+                        <h3>۱۰ ترند برتر هوش مصنوعی که باید بدانید</h3>
+                        <p>از هوش مصنوعی مولد تا رباتیک پیشرفته، ترندهایی که آینده را شکل می‌دهند...</p>
+                        <a href="#" class="read-more">
+                            ادامه مطلب <i class="fas fa-arrow-left"></i>
+                        </a>
+                    </div>
+                </article>
+
+                <article class="blog-card" data-animate="fade-up" data-delay="600" data-blog-category="اخبار">
+                    <div class="blog-image">
+                        <img src="https://images.unsplash.com/photo-1535378917042-10a22c95931a?w=400&q=80" alt="رویداد AI" loading="lazy">
+                        <span class="blog-tag">اخبار</span>
+                    </div>
+                    <div class="blog-content">
+                        <div class="post-meta">
+                            <span><i class="fas fa-calendar"></i> ۱۵ دی ۱۴۰۴</span>
+                            <span><i class="fas fa-clock"></i> ۳ دقیقه</span>
+                        </div>
+                        <h3>رویداد بزرگ هوش مصنوعی ایران ۱۴۰۵</h3>
+                        <p>اطلاعات کامل درباره بزرگ‌ترین رویداد هوش مصنوعی ایران و نحوه شرکت...</p>
+                        <a href="#" class="read-more">
+                            ادامه مطلب <i class="fas fa-arrow-left"></i>
+                        </a>
+                    </div>
+                </article>
+            </div>
+
+            <div class="no-results" id="noResults" style="display: none;">
+                <i class="fas fa-search"></i>
+                <p>نتیجه‌ای یافت نشد</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CONTACT SECTION ==================== -->
+    <section id="contact" class="contact-section section">
+        <div class="container">
+            <div class="section-header" data-animate="fade-up">
+                <span class="section-tag">تماس با ما</span>
+                <h2 class="section-title">با ما در <span class="gradient-text">ارتباط</span> باشید</h2>
+                <p class="section-subtitle">برای مشاوره رایگان و شروع پروژه هوش مصنوعی خود با ما تماس بگیرید</p>
+            </div>
+
+            <div class="contact-grid">
+                <div class="contact-info" data-animate="fade-right">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>آدرس دفتر</h4>
+                            <p>تهران، بلوار کشاورز، خیابان نادری<br>پلاک ۴۲، طبقه ۵</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>تلفن تماس</h4>
+                            <p dir="ltr">+98 21 8888 7777</p>
+                            <p dir="ltr">+98 912 345 6789</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>ایمیل</h4>
+                            <p>info@noavari-hoosh.ir</p>
+                            <p>support@noavari-hoosh.ir</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h4>ساعات کاری</h4>
+                            <p>شنبه تا چهارشنبه: ۸:۰۰ - ۱۷:۰۰</p>
+                            <p>پنج‌شنبه: ۸:۰۰ - ۱۳:۰۰</p>
+                        </div>
+                    </div>
+
+                    <div class="social-links">
+                        <h4>ما را دنبال کنید</h4>
+                        <div class="social-icons">
+                            <a href="#" aria-label="اینستاگرام"><i class="fab fa-instagram"></i></a>
+                            <a href="#" aria-label="لینکدین"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" aria-label="توییتر"><i class="fab fa-twitter"></i></a>
+                            <a href="#" aria-label="تلگرام"><i class="fab fa-telegram-plane"></i></a>
+                            <a href="#" aria-label="گیت‌هاب"><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-wrapper" data-animate="fade-left">
+                    <form id="contactForm" class="contact-form">
+                        <h3>فرم تماس</h3>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="name">نام و نام خانوادگی</label>
+                                <input type="text" id="name" name="name" placeholder="نام شما" required>
+                                <span class="form-error"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="email">ایمیل</label>
+                                <input type="email" id="email" name="email" placeholder="example@email.com" dir="ltr" required>
+                                <span class="form-error"></span>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="phone">تلفن تماس</label>
+                                <input type="tel" id="phone" name="phone" placeholder="۰۹۱۲۳۴۵۶۷۸۹" dir="ltr">
+                                <span class="form-error"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="subject">موضوع</label>
+                                <select id="subject" name="subject" required>
+                                    <option value="">انتخاب کنید...</option>
+                                    <option value="consultation">مشاوره</option>
+                                    <option value="project">درخواست پروژه</option>
+                                    <option value="partnership">همکاری</option>
+                                    <option value="support">پشتیبانی</option>
+                                    <option value="other">سایر</option>
+                                </select>
+                                <span class="form-error"></span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">پیام شما</label>
+                            <textarea id="message" name="message" rows="5" placeholder="پیام خود را بنویسید..." required></textarea>
+                            <span class="form-error"></span>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-lg btn-block">
+                            <i class="fas fa-paper-plane"></i>
+                            ارسال پیام
+                        </button>
+                    </form>
+                    <div id="formSuccess" class="form-success" style="display: none;">
+                        <i class="fas fa-check-circle"></i>
+                        <h3>پیام شما با موفقیت ارسال شد!</h3>
+                        <p>کارشناسان ما در اسرع وقت با شما تماس خواهند گرفت.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Map -->
+            <div class="map-container" data-animate="fade-up">
+                <div class="map-placeholder">
+                    <i class="fas fa-map-marked-alt"></i>
+                    <h3>موقعیت ما روی نقشه</h3>
+                    <p>تهران، بلوار کشاورز، خیابان نادری، پلاک ۴۲</p>
+                    <div class="map-visual">
+                        <div class="map-pin">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <div class="pin-pulse"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="#home" class="footer-logo">
+                        <i class="fas fa-brain"></i>
+                        <span>نوآوری<strong>هوش</strong></span>
+                    </a>
+                    <p>شرکت نوآوری هوش، پیشرو در ارائه راهکارهای هوش مصنوعی و تحول دیجیتال. ما آینده را امروز می‌سازیم.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="اینستاگرام"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="لینکدین"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="توییتر"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="تلگرام"><i class="fab fa-telegram-plane"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-links-group">
+                    <h4>لینک‌های سریع</h4>
+                    <ul>
+                        <li><a href="#home">خانه</a></li>
+                        <li><a href="#about">درباره ما</a></li>
+                        <li><a href="#services">خدمات</a></li>
+                        <li><a href="#portfolio">نمونه‌کارها</a></li>
+                        <li><a href="#blog">بلاگ</a></li>
+                        <li><a href="#contact">تماس</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links-group">
+                    <h4>خدمات ما</h4>
+                    <ul>
+                        <li><a href="#services">یادگیری ماشین</a></li>
+                        <li><a href="#services">پردازش زبان طبیعی</a></li>
+                        <li><a href="#services">بینایی ماشین</a></li>
+                        <li><a href="#services">اتوماسیون هوشمند</a></li>
+                        <li><a href="#services">تحلیل داده کلان</a></li>
+                        <li><a href="#services">AI ابری</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-newsletter">
+                    <h4>خبرنامه</h4>
+                    <p>برای دریافت آخرین اخبار و مقالات هوش مصنوعی عضو خبرنامه ما شوید.</p>
+                    <form class="newsletter-form" id="newsletterForm">
+                        <input type="email" placeholder="ایمیل شما..." dir="ltr" required>
+                        <button type="submit">
+                            <i class="fas fa-arrow-left"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© ۱۴۰۴ نوآوری هوش. تمامی حقوق محفوظ است.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">حریم خصوصی</a>
+                    <a href="#">شرایط استفاده</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button id="backToTop" class="back-to-top" aria-label="بازگشت به بالا">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,247 @@
+/* ========================================
+   NOAVARI HOOSH - Animations
+   ======================================== */
+
+/* ==================== SCROLL ANIMATIONS ==================== */
+[data-animate] {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                transform 0.7s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+[data-animate="fade-up"].animate {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+[data-animate="fade-right"] {
+    transform: translateX(60px);
+}
+
+[data-animate="fade-right"].animate {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+[data-animate="fade-left"] {
+    transform: translateX(-60px);
+}
+
+[data-animate="fade-left"].animate {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+[data-animate="fade-in"] {
+    transform: none;
+}
+
+[data-animate="fade-in"].animate {
+    opacity: 1;
+}
+
+[data-animate="scale-up"] {
+    transform: scale(0.85);
+}
+
+[data-animate="scale-up"].animate {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* ==================== HOVER ANIMATIONS ==================== */
+@keyframes shimmer {
+    0% {
+        background-position: -200% center;
+    }
+    100% {
+        background-position: 200% center;
+    }
+}
+
+.gradient-text {
+    background-size: 200% auto;
+    animation: shimmer 4s linear infinite;
+}
+
+/* ==================== GLOW EFFECTS ==================== */
+@keyframes glow-pulse {
+    0%, 100% {
+        box-shadow: 0 0 20px rgba(108, 58, 237, 0.2);
+    }
+    50% {
+        box-shadow: 0 0 40px rgba(108, 58, 237, 0.4), 0 0 60px rgba(6, 182, 212, 0.2);
+    }
+}
+
+/* ==================== TYPING EFFECT ==================== */
+@keyframes blink-cursor {
+    0%, 100% { border-color: var(--primary-light); }
+    50% { border-color: transparent; }
+}
+
+/* ==================== SECTION TRANSITIONS ==================== */
+.section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, var(--border-color), transparent);
+}
+
+/* ==================== CARD SHINE EFFECT ==================== */
+.service-card::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(255, 255, 255, 0.02),
+        transparent
+    );
+    transition: 0.6s;
+}
+
+.service-card:hover::after {
+    left: 100%;
+}
+
+/* ==================== RIPPLE EFFECT ==================== */
+.btn-primary::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: radial-gradient(circle, rgba(255,255,255,0.25) 10%, transparent 10.01%);
+    transform: scale(10);
+    opacity: 0;
+    transition: transform 0.5s, opacity 0.5s;
+}
+
+.btn-primary:active::after {
+    transform: scale(0);
+    opacity: 1;
+    transition: 0s;
+}
+
+/* ==================== FLOAT ANIMATIONS ==================== */
+@keyframes float-slow {
+    0%, 100% { transform: translateY(0) rotate(0deg); }
+    33% { transform: translateY(-12px) rotate(1deg); }
+    66% { transform: translateY(8px) rotate(-1deg); }
+}
+
+@keyframes float-medium {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+/* ==================== PROGRESS BAR ANIMATION ==================== */
+@keyframes progress-fill {
+    from { width: 0; }
+}
+
+/* ==================== SMOOTH REVEAL ==================== */
+@keyframes reveal-up {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes reveal-right {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* ==================== STAGGER ANIMATIONS ==================== */
+.services-grid .service-card:nth-child(1) { transition-delay: 0.1s; }
+.services-grid .service-card:nth-child(2) { transition-delay: 0.2s; }
+.services-grid .service-card:nth-child(3) { transition-delay: 0.3s; }
+.services-grid .service-card:nth-child(4) { transition-delay: 0.4s; }
+.services-grid .service-card:nth-child(5) { transition-delay: 0.5s; }
+.services-grid .service-card:nth-child(6) { transition-delay: 0.6s; }
+
+.portfolio-grid .portfolio-item:nth-child(1) { transition-delay: 0.05s; }
+.portfolio-grid .portfolio-item:nth-child(2) { transition-delay: 0.1s; }
+.portfolio-grid .portfolio-item:nth-child(3) { transition-delay: 0.15s; }
+.portfolio-grid .portfolio-item:nth-child(4) { transition-delay: 0.2s; }
+.portfolio-grid .portfolio-item:nth-child(5) { transition-delay: 0.25s; }
+.portfolio-grid .portfolio-item:nth-child(6) { transition-delay: 0.3s; }
+
+.blog-grid .blog-card:nth-child(1) { transition-delay: 0.05s; }
+.blog-grid .blog-card:nth-child(2) { transition-delay: 0.1s; }
+.blog-grid .blog-card:nth-child(3) { transition-delay: 0.15s; }
+.blog-grid .blog-card:nth-child(4) { transition-delay: 0.2s; }
+.blog-grid .blog-card:nth-child(5) { transition-delay: 0.25s; }
+.blog-grid .blog-card:nth-child(6) { transition-delay: 0.3s; }
+
+/* ==================== NAVBAR ANIMATION ==================== */
+.navbar .nav-links a::after {
+    content: '';
+    position: absolute;
+    bottom: 2px;
+    right: 16px;
+    left: 16px;
+    height: 2px;
+    background: var(--gradient-primary);
+    border-radius: 2px;
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+}
+
+.navbar .nav-links a:hover::after,
+.navbar .nav-links a.active::after {
+    transform: scaleX(1);
+}
+
+/* ==================== PARTNERS MARQUEE ==================== */
+@keyframes marquee {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+}
+
+/* ==================== REDUCED MOTION ==================== */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
+    }
+
+    [data-animate] {
+        opacity: 1;
+        transform: none;
+    }
+
+    .gradient-orb {
+        animation: none;
+    }
+
+    .floating-card {
+        animation: none;
+    }
+}

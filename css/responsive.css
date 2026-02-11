@@ -1,0 +1,436 @@
+/* ========================================
+   NOAVARI HOOSH - Responsive Styles
+   Mobile-First Approach
+   ======================================== */
+
+/* ==================== TABLET (max-width: 1024px) ==================== */
+@media (max-width: 1024px) {
+    :root {
+        --font-size-5xl: 2.8rem;
+        --font-size-4xl: 2.2rem;
+        --font-size-3xl: 1.75rem;
+        --section-padding: 80px 0;
+    }
+
+    .hero-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+        text-align: center;
+    }
+
+    .hero-text {
+        order: 1;
+    }
+
+    .hero-visual {
+        order: 0;
+    }
+
+    .hero-description {
+        max-width: 100%;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-stats {
+        justify-content: center;
+    }
+
+    .hero-img {
+        height: 350px;
+    }
+
+    .floating-card.card-1 { right: 10px; }
+    .floating-card.card-2 { left: 10px; }
+    .floating-card.card-3 { right: 20px; }
+
+    /* About */
+    .about-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .about-img-wrapper img {
+        height: 400px;
+    }
+
+    /* Services */
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Portfolio */
+    .portfolio-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Blog */
+    .blog-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .featured-post {
+        grid-template-columns: 1fr;
+    }
+
+    .featured-image {
+        min-height: 250px;
+    }
+
+    /* Contact */
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Footer */
+    .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* ==================== MOBILE LARGE (max-width: 768px) ==================== */
+@media (max-width: 768px) {
+    :root {
+        --font-size-5xl: 2.2rem;
+        --font-size-4xl: 1.8rem;
+        --font-size-3xl: 1.5rem;
+        --font-size-2xl: 1.3rem;
+        --section-padding: 60px 0;
+    }
+
+    /* Navigation - Mobile */
+    .nav-links {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 280px;
+        height: 100vh;
+        background: rgba(11, 15, 26, 0.98);
+        backdrop-filter: blur(30px);
+        -webkit-backdrop-filter: blur(30px);
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 100px 30px 30px;
+        gap: 4px;
+        transition: right 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+        z-index: 999;
+        border-left: 1px solid var(--border-color);
+        overflow-y: auto;
+    }
+
+    .nav-links.active {
+        right: 0;
+    }
+
+    .nav-links a {
+        width: 100%;
+        padding: 12px 16px;
+        font-size: var(--font-size-base);
+        border-radius: var(--radius-md);
+    }
+
+    .nav-actions .btn {
+        display: none;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    /* Mobile Overlay */
+    .nav-links::before {
+        content: '';
+        position: fixed;
+        top: 0;
+        right: 280px;
+        width: 100vw;
+        height: 100vh;
+        background: rgba(0, 0, 0, 0.5);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        pointer-events: none;
+    }
+
+    .nav-links.active::before {
+        opacity: 1;
+        pointer-events: auto;
+    }
+
+    /* Hero */
+    .hero-section {
+        padding-top: 80px;
+        min-height: auto;
+        padding-bottom: 40px;
+    }
+
+    .hero-img {
+        height: 280px;
+    }
+
+    .floating-card {
+        padding: 10px 16px;
+        font-size: var(--font-size-xs);
+    }
+
+    .hero-stats {
+        gap: 24px;
+    }
+
+    .stat-number {
+        font-size: var(--font-size-2xl);
+    }
+
+    .scroll-indicator {
+        display: none;
+    }
+
+    /* Services */
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* Portfolio */
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .portfolio-filter {
+        justify-content: flex-start;
+        overflow-x: auto;
+        padding-bottom: 8px;
+        flex-wrap: nowrap;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .filter-btn {
+        white-space: nowrap;
+        flex-shrink: 0;
+    }
+
+    /* Blog */
+    .blog-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .blog-toolbar {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .blog-search {
+        max-width: 100%;
+    }
+
+    .blog-categories {
+        overflow-x: auto;
+        padding-bottom: 8px;
+        flex-wrap: nowrap;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .cat-btn {
+        white-space: nowrap;
+        flex-shrink: 0;
+    }
+
+    /* Contact */
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-form-wrapper {
+        padding: 24px;
+    }
+
+    /* Footer */
+    .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .footer-bottom {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+    }
+
+    /* Partners */
+    .partners-track {
+        justify-content: center;
+    }
+
+    .partner-logo {
+        padding: 12px 20px;
+        font-size: var(--font-size-xs);
+    }
+}
+
+/* ==================== MOBILE SMALL (max-width: 480px) ==================== */
+@media (max-width: 480px) {
+    :root {
+        --font-size-5xl: 1.8rem;
+        --font-size-4xl: 1.5rem;
+        --font-size-3xl: 1.3rem;
+        --font-size-2xl: 1.15rem;
+        --section-padding: 50px 0;
+        --container-padding: 0 16px;
+    }
+
+    .hero-img {
+        height: 220px;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .hero-buttons .btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .hero-stats {
+        flex-wrap: wrap;
+        gap: 16px;
+    }
+
+    .stat-item {
+        flex: 1;
+        min-width: 80px;
+    }
+
+    /* About */
+    .about-img-wrapper img {
+        height: 280px;
+    }
+
+    .about-values {
+        grid-template-columns: 1fr;
+    }
+
+    .experience-badge {
+        bottom: -10px;
+        left: -10px;
+        padding: 14px 20px;
+    }
+
+    .exp-number {
+        font-size: var(--font-size-2xl);
+    }
+
+    /* Blog */
+    .featured-content {
+        padding: 24px;
+    }
+
+    .featured-content h3 {
+        font-size: var(--font-size-xl);
+    }
+
+    /* Contact */
+    .contact-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .contact-icon {
+        margin: 0 auto;
+    }
+
+    .social-links {
+        text-align: center;
+    }
+
+    .social-icons {
+        justify-content: center;
+    }
+
+    /* Map */
+    .map-placeholder {
+        padding: 40px 16px;
+    }
+
+    /* Lightbox */
+    .lightbox {
+        padding: 20px;
+    }
+
+    .lightbox-close {
+        top: -36px;
+    }
+
+    .lightbox-info h3 {
+        font-size: var(--font-size-base);
+    }
+
+    .lightbox-info p {
+        font-size: var(--font-size-sm);
+    }
+}
+
+/* ==================== LANDSCAPE MOBILE ==================== */
+@media (max-height: 500px) and (orientation: landscape) {
+    .hero-section {
+        min-height: auto;
+        padding: 100px 0 40px;
+    }
+
+    .hero-img {
+        height: 200px;
+    }
+
+    .scroll-indicator {
+        display: none;
+    }
+}
+
+/* ==================== HIGH DPI SCREENS ==================== */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .grid-overlay {
+        background-size: 40px 40px;
+    }
+}
+
+/* ==================== WIDE SCREENS ==================== */
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1340px;
+    }
+
+    :root {
+        --font-size-5xl: 4rem;
+    }
+
+    .hero-img {
+        height: 540px;
+    }
+}
+
+/* ==================== PRINT STYLES ==================== */
+@media print {
+    .navbar,
+    .back-to-top,
+    .scroll-indicator,
+    #particles-canvas,
+    .hero-bg-effects,
+    #preloader {
+        display: none !important;
+    }
+
+    body {
+        background: white;
+        color: #333;
+    }
+
+    .section {
+        padding: 30px 0;
+        break-inside: avoid;
+    }
+
+    .gradient-text {
+        -webkit-text-fill-color: #6C3AED;
+    }
+}
