@@ -107,7 +107,8 @@
         right: -100%;
         width: 280px;
         height: 100vh;
-        background: rgba(11, 15, 26, 0.98);
+        /* شیشه‌ای مثل نوار بالا */
+        background: var(--bg-glass);
         backdrop-filter: blur(30px);
         -webkit-backdrop-filter: blur(30px);
         flex-direction: column;
