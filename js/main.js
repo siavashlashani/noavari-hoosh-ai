@@ -293,6 +293,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const lightboxClose = document.getElementById('lightboxClose');
     const zoomBtns = document.querySelectorAll('.portfolio-zoom');
 
+    // باز کردن لایت‌باکس با کلیک روی دکمه ذره‌بین
     zoomBtns.forEach(btn => {
         btn.addEventListener('click', () => {
             const img = btn.getAttribute('data-img');
@@ -304,6 +305,20 @@ document.addEventListener('DOMContentLoaded', () => {
             lightboxDesc.textContent = desc;
             lightbox.classList.add('active');
             document.body.classList.add('no-scroll');
+        });
+    });
+
+    // باز شدن عکس‌ها روی موبایل با لمس خود تصویر (نه فقط آیکون)
+    const portfolioImages = document.querySelectorAll('.portfolio-image');
+    portfolioImages.forEach(wrapper => {
+        wrapper.addEventListener('click', (e) => {
+            // اگر روی لینک جداگانه کلیک شده، همان رفتار پیش‌فرض را نگه داریم
+            if (e.target.closest('.portfolio-link')) return;
+
+            const zoomBtn = wrapper.querySelector('.portfolio-zoom');
+            if (zoomBtn) {
+                zoomBtn.click();
+            }
         });
     });
 
