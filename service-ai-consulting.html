@@ -13,6 +13,247 @@
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/animations.css">
     <link rel="stylesheet" href="css/responsive.css">
+    <style>
+        /* ========== صفحه مشاوره AI - استایل‌های اختصاصی ========== */
+        .service-hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: center;
+        }
+        @media (max-width: 992px) {
+            .service-hero-content { grid-template-columns: 1fr; }
+            .service-motion-wrap { order: -1; max-height: 280px; }
+        }
+
+        /* مونشن گرافیک - شبکه عصبی */
+        .service-motion-wrap {
+            position: relative;
+            aspect-ratio: 1;
+            max-width: 480px;
+            margin: 0 auto;
+        }
+        .service-motion-svg {
+            width: 100%;
+            height: 100%;
+            filter: drop-shadow(0 0 40px rgba(108, 58, 237, 0.25));
+        }
+        .motion-node {
+            fill: url(#nodeGradient);
+            opacity: 0.9;
+            transform-box: fill-box;
+            transform-origin: center;
+            animation: node-pulse 2.5s ease-in-out infinite;
+        }
+        .motion-node:nth-child(1) { animation-delay: 0s; }
+        .motion-node:nth-child(2) { animation-delay: 0.2s; }
+        .motion-node:nth-child(3) { animation-delay: 0.4s; }
+        .motion-node:nth-child(4) { animation-delay: 0.6s; }
+        .motion-node:nth-child(5) { animation-delay: 0.8s; }
+        .motion-node:nth-child(6) { animation-delay: 1s; }
+        .motion-node:nth-child(7) { animation-delay: 1.2s; }
+        .motion-node:nth-child(8) { animation-delay: 1.4s; }
+        .motion-node:nth-child(9) { animation-delay: 1.6s; }
+        .motion-line {
+            fill: none;
+            stroke: url(#lineGradient);
+            stroke-width: 1.5;
+            stroke-dasharray: 8 12;
+            animation: line-flow 3s linear infinite;
+            opacity: 0.7;
+        }
+        .motion-line:nth-of-type(2) { animation-delay: 0.5s; }
+        .motion-line:nth-of-type(3) { animation-delay: 1s; }
+        .motion-line:nth-of-type(4) { animation-delay: 1.5s; }
+        .motion-line:nth-of-type(5) { animation-delay: 2s; }
+        .motion-line:nth-of-type(6) { animation-delay: 2.5s; }
+        .motion-core {
+            fill: url(#coreGradient);
+            animation: core-glow 4s ease-in-out infinite;
+        }
+        @keyframes node-pulse {
+            0%, 100% { transform: scale(1); opacity: 0.9; }
+            50% { transform: scale(1.15); opacity: 1; }
+        }
+        @keyframes line-flow {
+            0% { stroke-dashoffset: 0; }
+            100% { stroke-dashoffset: -40; }
+        }
+        @keyframes core-glow {
+            0%, 100% { filter: drop-shadow(0 0 20px rgba(108, 58, 237, 0.6)); opacity: 1; }
+            50% { filter: drop-shadow(0 0 35px rgba(14, 165, 233, 0.8)); opacity: 0.95; }
+        }
+
+        /* گرید قابلیت‌ها */
+        .service-features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        .service-feature-card {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            padding: 1.75rem;
+            transition: var(--transition-base);
+            position: relative;
+            overflow: hidden;
+        }
+        .service-feature-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 80px;
+            height: 80px;
+            background: var(--gradient-card);
+            border-radius: 0 0 0 100%;
+            opacity: 0.6;
+        }
+        .service-feature-card:hover {
+            border-color: var(--primary-light);
+            box-shadow: var(--shadow-md);
+            transform: translateY(-4px);
+        }
+        .service-feature-card i {
+            font-size: 1.75rem;
+            color: var(--primary);
+            margin-bottom: 1rem;
+            display: block;
+        }
+        .service-feature-card h4 {
+            font-size: var(--font-size-lg);
+            margin-bottom: 0.5rem;
+        }
+        .service-feature-card p {
+            color: var(--text-secondary);
+            font-size: var(--font-size-sm);
+            line-height: 1.7;
+        }
+
+        /* فرآیند کار */
+        .service-process {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+        @media (max-width: 992px) {
+            .service-process { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 576px) {
+            .service-process { grid-template-columns: 1fr; }
+        }
+        .service-process-item {
+            text-align: center;
+            padding: 2rem 1.25rem;
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            position: relative;
+            transition: var(--transition-base);
+        }
+        .service-process-item:hover {
+            border-color: var(--primary-light);
+            box-shadow: var(--shadow-md);
+        }
+        .service-process-num {
+            width: 48px;
+            height: 48px;
+            margin: 0 auto 1rem;
+            background: var(--gradient-primary);
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 800;
+            font-size: var(--font-size-lg);
+        }
+        .service-process-item h4 {
+            font-size: var(--font-size-base);
+            margin-bottom: 0.5rem;
+        }
+        .service-process-item p {
+            color: var(--text-secondary);
+            font-size: var(--font-size-sm);
+            line-height: 1.6;
+        }
+
+        /* بخش گسترده intro */
+        .service-intro-block {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+            align-items: start;
+        }
+        @media (max-width: 992px) {
+            .service-intro-block { grid-template-columns: 1fr; }
+        }
+        .service-intro-visual {
+            position: relative;
+            border-radius: var(--radius-lg);
+            overflow: hidden;
+            min-height: 320px;
+            background: var(--gradient-card);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .service-intro-text h3 {
+            font-size: var(--font-size-2xl);
+            margin-bottom: 1rem;
+        }
+        .service-intro-text .service-features-inline {
+            list-style: none;
+            padding: 0;
+            margin: 1.5rem 0;
+        }
+        .service-features-inline li {
+            padding: 0.6rem 0;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+        }
+        .service-features-inline li:last-child { border-bottom: none; }
+        .service-features-inline i {
+            color: var(--primary);
+            width: 1.25rem;
+        }
+
+        /* کاربردها */
+        .service-use-cases {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+        @media (max-width: 768px) {
+            .service-use-cases { grid-template-columns: 1fr; }
+        }
+        .service-use-case {
+            background: var(--bg-darker);
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius-md);
+            padding: 1.5rem;
+            display: flex;
+            align-items: flex-start;
+            gap: 1rem;
+            transition: var(--transition-base);
+        }
+        .service-use-case:hover {
+            border-color: var(--primary-light);
+            box-shadow: var(--shadow-sm);
+        }
+        .service-use-case i {
+            font-size: 1.5rem;
+            color: var(--primary);
+            margin-top: 0.2rem;
+        }
+        .service-use-case h4 { font-size: var(--font-size-base); margin-bottom: 0.35rem; }
+        .service-use-case p { color: var(--text-secondary); font-size: var(--font-size-sm); line-height: 1.6; }
+    </style>
 </head>
 <body>
     <!-- Preloader -->
@@ -58,8 +299,8 @@
         </div>
     </nav>
 
-    <!-- ==================== SERVICE HERO ==================== -->
-    <section class="hero-section" style="min-height: 60vh;">
+    <!-- ==================== HERO با مونشن گرافیک ==================== -->
+    <section class="hero-section" style="min-height: 75vh; display: flex; align-items: center;">
         <div class="hero-bg-effects">
             <div class="gradient-orb orb-1"></div>
             <div class="gradient-orb orb-2"></div>
@@ -67,8 +308,8 @@
             <div class="grid-overlay"></div>
         </div>
         <div class="container">
-            <div class="hero-content" style="text-align: center;">
-                <div class="hero-text" style="max-width: 100%;">
+            <div class="hero-content service-hero-content">
+                <div class="hero-text" data-animate="fade-right">
                     <span class="hero-badge">
                         <i class="fas fa-brain"></i>
                         خدمات هوش مصنوعی
@@ -76,7 +317,7 @@
                     <h1 class="hero-title">
                         <span class="gradient-text">مشاوره هوش مصنوعی</span>
                     </h1>
-                    <p class="hero-description" style="max-width: 700px; margin: 0 auto 2rem;">
+                    <p class="hero-description" style="max-width: 100%;">
                         طراحی و پیاده‌سازی مدل‌های یادگیری ماشین سفارشی برای تحلیل داده‌ها، پیش‌بینی روندها و بهینه‌سازی فرآیندهای کسب‌وکار شما.
                     </p>
                     <a href="index.html#contact" class="btn btn-primary btn-lg">
@@ -84,44 +325,190 @@
                         درخواست مشاوره
                     </a>
                 </div>
+                <div class="service-motion-wrap" data-animate="fade-left">
+                    <!-- مونشن گرافیک: شبکه عصبی متحرک -->
+                    <svg class="service-motion-svg" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="nodeGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#6366F1"/>
+                                <stop offset="100%" style="stop-color:#0EA5E9"/>
+                            </linearGradient>
+                            <linearGradient id="lineGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                                <stop offset="0%" style="stop-color:#6C3AED;stop-opacity:0.6"/>
+                                <stop offset="100%" style="stop-color:#06B6D4;stop-opacity:0.8"/>
+                            </linearGradient>
+                            <radialGradient id="coreGradient" cx="50%" cy="50%" r="50%">
+                                <stop offset="0%" style="stop-color:#8B5CF6"/>
+                                <stop offset="100%" style="stop-color:#6C3AED"/>
+                            </radialGradient>
+                        </defs>
+                        <!-- خطوط اتصال متحرک -->
+                        <path class="motion-line" d="M 200 80 L 120 160 M 200 80 L 280 160 M 200 80 L 200 200"/>
+                        <path class="motion-line" d="M 120 160 L 80 280 M 120 160 L 200 200 M 280 160 L 320 280 M 280 160 L 200 200"/>
+                        <path class="motion-line" d="M 200 200 L 120 320 M 200 200 L 280 320 M 200 200 L 80 280 M 200 200 L 320 280"/>
+                        <path class="motion-line" d="M 80 280 L 200 360 M 320 280 L 200 360"/>
+                        <path class="motion-line" d="M 200 200 L 200 360"/>
+                        <!-- گره‌های شبکه -->
+                        <circle class="motion-node" cx="200" cy="80" r="18"/>
+                        <circle class="motion-node" cx="120" cy="160" r="14"/>
+                        <circle class="motion-node" cx="280" cy="160" r="14"/>
+                        <circle class="motion-node" cx="80" cy="280" r="12"/>
+                        <circle class="motion-node" cx="320" cy="280" r="12"/>
+                        <circle class="motion-node" cx="120" cy="320" r="12"/>
+                        <circle class="motion-node" cx="280" cy="320" r="12"/>
+                        <circle class="motion-node" cx="200" cy="360" r="14"/>
+                        <!-- هسته مرکزی -->
+                        <circle class="motion-core" cx="200" cy="200" r="32"/>
+                    </svg>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- ==================== SERVICE DETAIL ==================== -->
+    <!-- ==================== معرفی و قابلیت‌ها ==================== -->
     <section class="about-section section">
         <div class="container">
             <div class="section-header" data-animate="fade-up">
                 <span class="section-tag">خدمات ما</span>
                 <h2 class="section-title">چه <span class="gradient-text">ارائه می‌دهیم</span></h2>
+                <p class="section-subtitle">راهکارهای یادگیری ماشین و هوش مصنوعی متناسب با داده‌ها و اهداف کسب‌وکار شما</p>
             </div>
 
-            <div class="about-grid" style="align-items: flex-start;">
-                <div class="about-image" data-animate="fade-right">
-                    <div class="about-img-wrapper">
-                        <div class="service-icon-wrapper" style="width: 100%; max-width: 320px; margin: 0 auto; aspect-ratio: 1;">
-                            <div class="service-icon" style="width: 120px; height: 120px; font-size: 3rem;">
-                                <i class="fas fa-brain"></i>
-                            </div>
-                            <div class="service-glow"></div>
-                        </div>
-                    </div>
+            <div class="service-intro-block" data-animate="fade-up">
+                <div class="service-intro-visual">
+                    <!-- همان مونشن در باکس کوچکتر برای تنوع -->
+                    <svg class="service-motion-svg" style="width: 70%; height: 70%; max-width: 240px;" viewBox="0 0 400 400" xmlns="http://www.w3.org/2000/svg">
+                        <defs>
+                            <linearGradient id="nodeGrad2" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#6366F1"/>
+                                <stop offset="100%" style="stop-color:#0EA5E9"/>
+                            </linearGradient>
+                            <linearGradient id="lineGrad2" x1="0%" y1="0%" x2="100%" y2="0%">
+                                <stop offset="0%" style="stop-color:#6C3AED;stop-opacity:0.5"/>
+                                <stop offset="100%" style="stop-color:#06B6D4;stop-opacity:0.7"/>
+                            </linearGradient>
+                            <radialGradient id="coreGrad2" cx="50%" cy="50%" r="50%">
+                                <stop offset="0%" style="stop-color:#8B5CF6"/>
+                                <stop offset="100%" style="stop-color:#6C3AED"/>
+                            </radialGradient>
+                        </defs>
+                        <path class="motion-line" stroke="url(#lineGrad2)" d="M 200 80 L 120 160 M 200 80 L 280 160 M 200 80 L 200 200"/>
+                        <path class="motion-line" stroke="url(#lineGrad2)" d="M 120 160 L 200 200 M 280 160 L 200 200"/>
+                        <path class="motion-line" stroke="url(#lineGrad2)" d="M 200 200 L 80 280 M 200 200 L 320 280 M 200 200 L 120 320 M 200 200 L 280 320"/>
+                        <circle class="motion-node" fill="url(#nodeGrad2)" cx="200" cy="80" r="18"/>
+                        <circle class="motion-node" fill="url(#nodeGrad2)" cx="120" cy="160" r="14"/>
+                        <circle class="motion-node" fill="url(#nodeGrad2)" cx="280" cy="160" r="14"/>
+                        <circle class="motion-node" fill="url(#nodeGrad2)" cx="80" cy="280" r="12"/>
+                        <circle class="motion-node" fill="url(#nodeGrad2)" cx="320" cy="280" r="12"/>
+                        <circle class="motion-node" fill="url(#nodeGrad2)" cx="120" cy="320" r="12"/>
+                        <circle class="motion-node" fill="url(#nodeGrad2)" cx="280" cy="320" r="12"/>
+                        <circle class="motion-core" fill="url(#coreGrad2)" cx="200" cy="200" r="32"/>
+                    </svg>
                 </div>
-                <div style="flex: 1;">
-                    <h3 class="section-title" style="font-size: var(--font-size-2xl); margin-bottom: 1rem;">قابلیت‌های کلیدی</h3>
-                    <ul class="service-features" style="list-style: none; padding: 0; margin: 0 0 2rem;">
-                        <li style="padding: 0.75rem 0; border-bottom: 1px solid var(--border-color);"><i class="fas fa-check" style="color: var(--primary); margin-left: 0.5rem;"></i> ارائه راهکار پیاده‌سازی AI در کسب‌وکار</li>
-                        <li style="padding: 0.75rem 0; border-bottom: 1px solid var(--border-color);"><i class="fas fa-check" style="color: var(--primary); margin-left: 0.5rem;"></i> طبقه‌بندی و خوشه‌بندی داده‌ها</li>
-                        <li style="padding: 0.75rem 0; border-bottom: 1px solid var(--border-color);"><i class="fas fa-check" style="color: var(--primary); margin-left: 0.5rem;"></i> بهینه‌سازی الگوریتم‌ها</li>
-                        <li style="padding: 0.75rem 0;"><i class="fas fa-check" style="color: var(--primary); margin-left: 0.5rem;"></i> پیش‌بینی روند و تحلیل سری‌های زمانی</li>
-                    </ul>
-                    <p class="section-subtitle" style="margin-bottom: 1.5rem;">
-                        تیم متخصصان ما با استفاده از آخرین فناوری‌های یادگیری ماشین و یادگیری عمیق، راهکارهای سفارشی برای صنعت و داده‌های شما طراحی می‌کنند. از مرحله مشاوره و شناخت مسئله تا استقرار و پشتیبانی در کنار شما هستیم.
+                <div class="service-intro-text">
+                    <h3>قابلیت‌های کلیدی</h3>
+                    <p class="section-subtitle" style="margin-bottom: 0;">
+                        تیم متخصصان ما با استفاده از آخرین فناوری‌های یادگیری ماشین و یادگیری عمیق، راهکارهای سفارشی برای صنعت و داده‌های شما طراحی می‌کنند.
                     </p>
+                    <ul class="service-features-inline">
+                        <li><i class="fas fa-check"></i> ارائه راهکار پیاده‌سازی AI در کسب‌وکار</li>
+                        <li><i class="fas fa-check"></i> طبقه‌بندی و خوشه‌بندی داده‌ها</li>
+                        <li><i class="fas fa-check"></i> بهینه‌سازی الگوریتم‌ها</li>
+                        <li><i class="fas fa-check"></i> پیش‌بینی روند و تحلیل سری‌های زمانی</li>
+                    </ul>
                     <a href="index.html#contact" class="btn btn-primary">
                         <i class="fas fa-arrow-left"></i>
                         تماس برای مشاوره
                     </a>
+                </div>
+            </div>
+
+            <div class="service-features-grid" data-animate="fade-up">
+                <div class="service-feature-card">
+                    <i class="fas fa-project-diagram"></i>
+                    <h4>طراحی مدل سفارشی</h4>
+                    <p>طراحی و آموزش مدل‌های یادگیری ماشین متناسب با داده‌ها و اهداف کسب‌وکار شما.</p>
+                </div>
+                <div class="service-feature-card">
+                    <i class="fas fa-chart-line"></i>
+                    <h4>تحلیل و پیش‌بینی</h4>
+                    <p>تحلیل داده‌ها، پیش‌بینی روندها و گزارش‌های تحلیلی با دقت بالا.</p>
+                </div>
+                <div class="service-feature-card">
+                    <i class="fas fa-cogs"></i>
+                    <h4>بهینه‌سازی فرآیند</h4>
+                    <p>بهینه‌سازی الگوریتم‌ها و فرآیندهای سازمانی با استفاده از AI.</p>
+                </div>
+                <div class="service-feature-card">
+                    <i class="fas fa-cloud-upload-alt"></i>
+                    <h4>استقرار و پشتیبانی</h4>
+                    <p>استقرار روی سرور یا ابر و پشتیبانی مداوم برای عملکرد پایدار.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== فرآیند کار ما ==================== -->
+    <section class="section" style="background: var(--bg-darker);">
+        <div class="container">
+            <div class="section-header" data-animate="fade-up">
+                <span class="section-tag">روش کار</span>
+                <h2 class="section-title">فرآیند <span class="gradient-text">همکاری</span></h2>
+                <p class="section-subtitle">از شناخت مسئله تا استقرار و پشتیبانی، در تمام مراحل کنار شما هستیم.</p>
+            </div>
+            <div class="service-process" data-animate="fade-up">
+                <div class="service-process-item">
+                    <div class="service-process-num">۱</div>
+                    <h4>شناخت و تحلیل</h4>
+                    <p>درک نیازها، داده‌ها و اهداف کسب‌وکار شما.</p>
+                </div>
+                <div class="service-process-item">
+                    <div class="service-process-num">۲</div>
+                    <h4>طراحی راهکار</h4>
+                    <p>طراحی معماری مدل و انتخاب الگوریتم‌های مناسب.</p>
+                </div>
+                <div class="service-process-item">
+                    <div class="service-process-num">۳</div>
+                    <h4>پیاده‌سازی و آموزش</h4>
+                    <p>توسعه، آموزش و ارزیابی مدل روی داده‌های شما.</p>
+                </div>
+                <div class="service-process-item">
+                    <div class="service-process-num">۴</div>
+                    <h4>استقرار و پشتیبانی</h4>
+                    <p>راه‌اندازی در محیط واقعی و پشتیبانی مداوم.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== کاربردها ==================== -->
+    <section class="about-section section">
+        <div class="container">
+            <div class="section-header" data-animate="fade-up">
+                <span class="section-tag">کاربردها</span>
+                <h2 class="section-title">در چه <span class="gradient-text">صنایعی</span> کاربرد دارد؟</h2>
+            </div>
+            <div class="service-use-cases" data-animate="fade-up">
+                <div class="service-use-case">
+                    <i class="fas fa-shopping-cart"></i>
+                    <div>
+                        <h4>فروش و بازاریابی</h4>
+                        <p>پیش‌بینی تقاضا، توصیه محصول و بهینه‌سازی کمپین‌ها.</p>
+                    </div>
+                </div>
+                <div class="service-use-case">
+                    <i class="fas fa-heartbeat"></i>
+                    <div>
+                        <h4>سلامت و پزشکی</h4>
+                        <p>تشخیص، پیش‌بینی بیماری و تحلیل تصاویر پزشکی.</p>
+                    </div>
+                </div>
+                <div class="service-use-case">
+                    <i class="fas fa-university"></i>
+                    <div>
+                        <h4>مالی و بانکی</h4>
+                        <p>تشخیص تقلب، امتیاز اعتباری و پیش‌بینی بازار.</p>
+                    </div>
                 </div>
             </div>
         </div>
