@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>مشاوره هوش مصنوعی | هوشیکس</title>
+    <meta name="description" content="مشاوره و پیاده‌سازی راهکارهای هوش مصنوعی و یادگیری ماشین برای کسب‌وکار شما - هوشیکس">
+    <link rel="icon" type="image/png" sizes="32x32" href="image/ai2.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Vazirmatn:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="loader">
+            <div class="neural-network">
+                <div class="node"></div>
+                <div class="node"></div>
+                <div class="node"></div>
+                <div class="node"></div>
+                <div class="node"></div>
+            </div>
+            <p class="loader-text">در حال بارگذاری...</p>
+        </div>
+    </div>
+
+    <!-- Particle Background -->
+    <canvas id="particles-canvas"></canvas>
+
+    <!-- Navigation -->
+    <nav id="navbar" class="navbar">
+        <div class="container">
+            <a href="index.html" class="logo">
+                <i class="fas fa-brain"></i>
+                <span>Hooshix<strong>شریک هوشمند</strong></span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="index.html">خانه</a></li>
+                <li><a href="index.html#about">درباره ما</a></li>
+                <li><a href="index.html#services">خدمات</a></li>
+                <li><a href="index.html#portfolio">نمونه‌کارها</a></li>
+                <li><a href="index.html#blog">بلاگ</a></li>
+                <li><a href="index.html#contact">تماس</a></li>
+            </ul>
+            <div class="nav-actions">
+                <a href="index.html#contact" class="btn btn-primary btn-sm">مشاوره رایگان</a>
+                <button class="menu-toggle" id="menuToggle" aria-label="منوی ناوبری">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ==================== SERVICE HERO ==================== -->
+    <section class="hero-section" style="min-height: 60vh;">
+        <div class="hero-bg-effects">
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+            <div class="gradient-orb orb-3"></div>
+            <div class="grid-overlay"></div>
+        </div>
+        <div class="container">
+            <div class="hero-content" style="text-align: center;">
+                <div class="hero-text" style="max-width: 100%;">
+                    <span class="hero-badge">
+                        <i class="fas fa-brain"></i>
+                        خدمات هوش مصنوعی
+                    </span>
+                    <h1 class="hero-title">
+                        <span class="gradient-text">مشاوره هوش مصنوعی</span>
+                    </h1>
+                    <p class="hero-description" style="max-width: 700px; margin: 0 auto 2rem;">
+                        طراحی و پیاده‌سازی مدل‌های یادگیری ماشین سفارشی برای تحلیل داده‌ها، پیش‌بینی روندها و بهینه‌سازی فرآیندهای کسب‌وکار شما.
+                    </p>
+                    <a href="index.html#contact" class="btn btn-primary btn-lg">
+                        <i class="fas fa-paper-plane"></i>
+                        درخواست مشاوره
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== SERVICE DETAIL ==================== -->
+    <section class="about-section section">
+        <div class="container">
+            <div class="section-header" data-animate="fade-up">
+                <span class="section-tag">خدمات ما</span>
+                <h2 class="section-title">چه <span class="gradient-text">ارائه می‌دهیم</span></h2>
+            </div>
+
+            <div class="about-grid" style="align-items: flex-start;">
+                <div class="about-image" data-animate="fade-right">
+                    <div class="about-img-wrapper">
+                        <div class="service-icon-wrapper" style="width: 100%; max-width: 320px; margin: 0 auto; aspect-ratio: 1;">
+                            <div class="service-icon" style="width: 120px; height: 120px; font-size: 3rem;">
+                                <i class="fas fa-brain"></i>
+                            </div>
+                            <div class="service-glow"></div>
+                        </div>
+                    </div>
+                </div>
+                <div style="flex: 1;">
+                    <h3 class="section-title" style="font-size: var(--font-size-2xl); margin-bottom: 1rem;">قابلیت‌های کلیدی</h3>
+                    <ul class="service-features" style="list-style: none; padding: 0; margin: 0 0 2rem;">
+                        <li style="padding: 0.75rem 0; border-bottom: 1px solid var(--border-color);"><i class="fas fa-check" style="color: var(--primary); margin-left: 0.5rem;"></i> ارائه راهکار پیاده‌سازی AI در کسب‌وکار</li>
+                        <li style="padding: 0.75rem 0; border-bottom: 1px solid var(--border-color);"><i class="fas fa-check" style="color: var(--primary); margin-left: 0.5rem;"></i> طبقه‌بندی و خوشه‌بندی داده‌ها</li>
+                        <li style="padding: 0.75rem 0; border-bottom: 1px solid var(--border-color);"><i class="fas fa-check" style="color: var(--primary); margin-left: 0.5rem;"></i> بهینه‌سازی الگوریتم‌ها</li>
+                        <li style="padding: 0.75rem 0;"><i class="fas fa-check" style="color: var(--primary); margin-left: 0.5rem;"></i> پیش‌بینی روند و تحلیل سری‌های زمانی</li>
+                    </ul>
+                    <p class="section-subtitle" style="margin-bottom: 1.5rem;">
+                        تیم متخصصان ما با استفاده از آخرین فناوری‌های یادگیری ماشین و یادگیری عمیق، راهکارهای سفارشی برای صنعت و داده‌های شما طراحی می‌کنند. از مرحله مشاوره و شناخت مسئله تا استقرار و پشتیبانی در کنار شما هستیم.
+                    </p>
+                    <a href="index.html#contact" class="btn btn-primary">
+                        <i class="fas fa-arrow-left"></i>
+                        تماس برای مشاوره
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== CTA ==================== -->
+    <section class="section" style="background: var(--gradient-card); border-radius: var(--radius-lg); margin: 2rem 0;">
+        <div class="container">
+            <div class="section-header" data-animate="fade-up">
+                <h2 class="section-title">آماده شروع <span class="gradient-text">همکاری</span> هستید؟</h2>
+                <p class="section-subtitle">برای دریافت مشاوره رایگان و طرح اولیه پروژه با ما در تماس باشید.</p>
+                <a href="index.html#contact" class="btn btn-primary btn-lg" style="margin-top: 1rem;">
+                    <i class="fas fa-envelope"></i>
+                    تماس با ما
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================== FOOTER ==================== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <a href="index.html" class="footer-logo">
+                        <i class="fas fa-brain"></i>
+                        <span><strong>هوشیکس</strong></span>
+                    </a>
+                    <p>شرکت هوشیکس پیشرو در ارائه راهکارهای هوش مصنوعی و تحول دیجیتال. ما آینده را امروز می‌سازیم.</p>
+                    <div class="footer-social">
+                        <a href="#" aria-label="اینستاگرام"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="لینکدین"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" aria-label="توییتر"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="تلگرام"><i class="fab fa-telegram-plane"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-links-group">
+                    <h4>لینک‌های سریع</h4>
+                    <ul>
+                        <li><a href="index.html">خانه</a></li>
+                        <li><a href="index.html#about">درباره ما</a></li>
+                        <li><a href="index.html#services">خدمات</a></li>
+                        <li><a href="index.html#portfolio">نمونه‌کارها</a></li>
+                        <li><a href="index.html#blog">بلاگ</a></li>
+                        <li><a href="index.html#contact">تماس</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links-group">
+                    <h4>خدمات ما</h4>
+                    <ul>
+                        <li><a href="index.html#services">یادگیری ماشین</a></li>
+                        <li><a href="index.html#services">پردازش زبان طبیعی</a></li>
+                        <li><a href="index.html#services">بینایی ماشین</a></li>
+                        <li><a href="index.html#services">اتوماسیون هوشمند</a></li>
+                        <li><a href="index.html#services">تحلیل داده کلان</a></li>
+                        <li><a href="index.html#services">AI ابری</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-newsletter">
+                    <h4>خبرنامه</h4>
+                    <p>برای دریافت آخرین اخبار و مقالات هوش مصنوعی عضو خبرنامه ما شوید.</p>
+                    <form class="newsletter-form" id="newsletterForm">
+                        <input type="email" placeholder="ایمیل شما..." dir="ltr" required>
+                        <button type="submit">
+                            <i class="fas fa-arrow-left"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© ۱۴۰۴ نوآوری هوش. تمامی حقوق محفوظ است.</p>
+                <div class="footer-bottom-links">
+                    <a href="#">حریم خصوصی</a>
+                    <a href="#">شرایط استفاده</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Back to Top -->
+    <button id="backToTop" class="back-to-top" aria-label="بازگشت به بالا">
+        <i class="fas fa-chevron-up"></i>
+    </button>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
